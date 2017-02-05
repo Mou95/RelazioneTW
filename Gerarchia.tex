@@ -1,5 +1,24 @@
 \section{Gerarchia dei file}
-
+La gerarchia dei file è così composta:
+\begin{itemize}
+	\item \textbf{Radice}: nella root directory sono presenti tutti gli script PHP delle pagine a cui l'utente può accedere e le seguenti cartelle:
+	\begin{itemize}
+		\item \textbf{css}: contiene tutti i fogli di stile;
+		\item \textbf{html}: contiene la parte statica di struttura delle pagine con eventuali etichette che verranno rimpiazzate dinamicamente dai vari script PHP;
+		\item \textbf{images}: contiene le immagini utilizzate nel sito e alcune sottocartelle:
+		\begin{itemize}
+			\item{icon}: immagini che sono icone nel nostro sito;
+			\item{heroes}: immagini relative agli eroi di HearthStone;
+			\item{user}: immagini del profilo degli utenti.
+		\end{itemize}
+		\item \textbf{php}: che si suddivide in:
+		\begin{itemize}
+			\item {Database}: contiene gli script che effettuano le operazioni sul database. Attravverso PDO si è cercato di costruire un'astrazione tra le classi contenute in Page e il database;
+			\item {Page}: contiene l'interfaccia Page(Page.php) che viene implementata dalle classi all'interno degli altri script. Le classi forniscono dei metodi per la creazione dinamica delle pagine e la gestione dei dati.
+		\end{itemize}
+		\item \textbf{script}: contiene i vari script realizzati in JavaScript;
+	\end{itemize}
+\end{itemize}
 
 
 \newpage
