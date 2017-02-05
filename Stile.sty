@@ -1,4 +1,3 @@
-
 %-------------------------
 %        PACCHETTI
 \usepackage{fancyhdr}
@@ -11,7 +10,13 @@
 \usepackage{float}
 
 
-
+\definecolor{link}{HTML}{62588A}
+\definecolor{url}{HTML}{0017d9}
+\hypersetup{%
+	colorlinks=true,%
+	linkcolor=link,%
+	urlcolor=url
+}
 
 %-------------------------
 % IMPOSTAZIONI PARAGRAPH
@@ -36,19 +41,22 @@
 	\begingroup
 	\centering
 	\includegraphics[scale=0.5]{img/logo.png}\\
-	\vspace{4cm}
-	{\LARGE \PROGETTO}\\
-	\rule{12cm}{0.4pt}\\
-	\vspace{1cm}
+	\vspace{5cm}
 	{\Huge \TITOLO }\\
 	\rule{12cm}{0.4pt}\\
 	\vspace{3cm}
 	\begin{table}[h]
-	\centering
-	\begin{tabular}{r|l}
-	\textbf{Componenti del gruppo} & \COMPONENTI \\
-	\end{tabular}
+		\centering
+		\begin{tabular}{r|l}
+			\textbf{Componenti del gruppo} & \COMPONENTI \\ \\
+			\textbf{Referente} & \REFERENTE \\
+		\end{tabular}
 	\end{table}
+	\vspace{1cm}
+	\textbf{\centerline{Indirizzo web del sito:}}
+	\vspace{0.2cm}
+	\centerline{\url{http://tecnologie-web.studenti.math.unipd.it/tecweb/~mbonolo/}}
+
 	\setcounter{page}{0}
 	\thispagestyle{empty}
 	\newpage
