@@ -1,0 +1,61 @@
+
+% Data: 2016-03-12
+
+%-------------------------
+%        PACCHETTI
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+\usepackage[table]{xcolor}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage[parfill]{parskip}
+\usepackage[yyyymmdd]{datetime}
+
+%-------------------------
+%      COMANDI UTILI
+% Evidenzia qualcosa scrivendolo centrato in una riga a capo
+\newcommand{\highlight}[1]{\vspace{1em}\\\hspace*{\fill}#1\hspace*{\fill}\vspace{1em}\\}
+% Voci presenti nel glossario
+\newcommand{\gl}[1]{\textit{#1}\ped{g}}
+% Standard ISO
+\newcommand{\iso}[1]{$[$#1$]$}
+% Nome di File
+\newcommand{\file}[1]{\texttt{#1}}
+% Nome di Documento
+\newcommand{\doc}[1]{``\textit{#1}''}
+% Nome di classi
+\newcommand{\cls}[1]{\textit{#1}}
+
+%-------------------------
+%        COLORI
+% Tabelle:
+%     - intestazione
+\definecolor{intestazione}{HTML}{FFFFFF}
+\definecolor{intestazione_txt}{HTML}{000000}
+\definecolor{linecolor}{rgb}{0.36, 0.54, 0.66}
+%     - dispari
+\definecolor{dispari}{rgb}{0.95, 0.95, 0.96}
+%     - pari
+\definecolor{pari}{HTML}{FFFFFF}
+
+%requisito soddisfatto
+\definecolor{reqSoddisfatto}{HTML}{2EA472}
+\definecolor{reqNonSoddisfatto}{HTML}{CC0000}
+
+
+%-------------------------
+%        TABELLE
+\usepackage{colortbl}
+\tabulinesep=1.2mm
+\newenvironment{tabella}[1]
+{
+	\def\arraystretch{1.5}
+	% \rowcolors{2}{dispari}{pari}
+	\begin{longtabu}{#1}
+	% \rowcolor{intestazione}
+	\arrayrulecolor{linecolor}
+	\taburowcolors[2] 3{dispari .. pari}
+}{
+	\end{longtabu}
+}
+

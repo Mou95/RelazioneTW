@@ -1,0 +1,68 @@
+
+%-------------------------
+%        PACCHETTI
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage[margin=3cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[bf]{caption}
+\usepackage{float}
+
+
+
+
+%-------------------------
+% IMPOSTAZIONI PARAGRAPH
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\subparagraph}
+{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+%-------------------------
+%      PRIMA PAGINA
+\renewcommand{\maketitle}{
+	\begingroup
+	\centering
+	\includegraphics[scale=0.5]{img/logo.png}\\
+	\vspace{4cm}
+	{\LARGE \PROGETTO}\\
+	\rule{12cm}{0.4pt}\\
+	\vspace{1cm}
+	{\Huge \TITOLO }\\
+	\rule{12cm}{0.4pt}\\
+	\vspace{3cm}
+	\begin{table}[h]
+	\centering
+	\begin{tabular}{r|l}
+	\textbf{Componenti del gruppo} & \COMPONENTI \\
+	\end{tabular}
+	\end{table}
+	\setcounter{page}{0}
+	\thispagestyle{empty}
+	\newpage
+	\clearpage
+	\setcounter{page}{1}
+	\endgroup
+}
+
+%-------------------------
+%         HEADER
+\rhead{\PROGETTO}
+
+%-------------------------
+%         FOOTER
+\pagestyle{fancy}
+\rfoot{Pagina \thepage{} di \pageref*{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
