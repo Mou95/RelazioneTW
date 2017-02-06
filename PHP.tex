@@ -1,5 +1,43 @@
 \section{PHP}
+\begin{itemize}
+	\item  \textbf{aggGuida.php}: offre all'utente che ha effettuato l'accesso la possibilità di inserire una guida;
+	\item \textbf{creaMazzo.php}: offre all'utente che ha effettuato l'accesso la possibilità di inserire un mazzo;
+	\item \textbf{scegliClasse.php}: permette di selezionare la classe del mazzo che si vuole creare;
+	\item \textbf{user.php}: visualizza il profilo dell'utente (informazioni utente, mazzi e guide create).
+	
+\end{itemize}
 
-
+\subsection{Utente non autenticato}
+L'utente non autenticato ha accesso alle seguenti pagine ed ai rispettivi contenuti:
+\begin{itemize}
+	\item \textbf{avventure.php}: vengono elencate le varie avventure del gioco;
+	\item \textbf{carte.php}: permette di visualizzare ed effettuare ricerche relative alle carte;
+	\item \textbf{discussione.php}: permette di visualizzare titolo, testo e commenti di un topic inserito da un utente;
+	\item \textbf{forum.php}: permette di visualizzare le varie sezioni del forum;
+	\item \textbf{guide.php}: visulizza le categorie delle guide disponibili;
+	\item \textbf{guideEroe.php}: visualizza le guide relative ad uno specifico eroe;
+	\item \textbf{index.php}: visualizza i migliori mazzi, le ultime guide inserite e un consiglio scelto in maniera casuale;
+	\item \textbf{login.php}: permette all'utente di effettuare l'accesso;
+	\item \textbf{mazzi.php}: visualizza i mazzi inseriti dagli utenti e permette di effettuare ricerche su di essi;
+	\item \textbf{mostraGuida.php}: visualizza titolo e testo di una guida inserita dall'utente;
+	\item \textbf{mostraMazzo.php}: visualizza le informazioni relative ad un mazzo (nome, voti, carte, utente);
+	\item \textbf{registrazione.php}: permette all'utente di diventare un membro del sito;
+	\item \textbf{ricercaForum.php}: visualizza i risultati di una ricerca effettuata in forum;
+	\item \textbf{ricercaGuida.php}: visualizza i risultati di una ricerca effettuata in guide;
+	\item \textbf{sezioneForum.php}: visualizza i topic di una sezione specifica;
+\end{itemize}
+\subsection{Utente autenticato}
+Dopo aver effettuato l'accesso, l'utente può accedere inoltre alle seguenti funzionalità:
+\begin{itemize}
+	\item  \textbf{aggGuida.php}: offre la possibilità di inserire una guida;
+	\item \textbf{creaMazzo.php}: offre la possibilità di inserire un mazzo;
+	\item \textbf{scegliClasse.php}: permette di selezionare la classe del mazzo che si vuole creare;
+	\item \textbf{user.php}: visualizza il profilo dell'utente permettendogli di visualizzare ed eliminare i mazzi e le guide da lui create
+\end{itemize}
+Inoltre viene offerta la possibilità di creare e commentare mazzi e topic.
+\subsection{Amministratore}
+L'utente amministratore (admin) gode delle stesse funzionalità dell'utente autenticato. Inoltre, ha la possibilità di eliminare qualsiasi mazzo, topic, commento e/o guida.
+\subsection{Gestione della sessione}
+Se il login avviene con successo viene creata una sessione sfruttando \textdollar \textunderscore SESSION. Utilizzando suddetta variabile vengono effettuati controlli per determinare il tipo di utente e l'insieme delle funzionalità a cui può accedere.
 
 \newpage
