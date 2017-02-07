@@ -7,7 +7,8 @@ Per ogni pagina web sono stati inseriti i seguenti tag meta:
 \begin{itemize}
 	\item \textbf{title}: titolo;
 	\item \textbf{description}: descrizione sintetica;
-	\item \textbf{keywords}: lista di parole chiave che permette di specificare gli argomenti trattati. 
+	\item \textbf{keywords}: lista di parole chiave che permette di specificare gli argomenti trattati;
+	\item \textbf{author}: indica gli autori della pagina.
 \end{itemize}
 \subsection{Screen reader}
 Ogni elemento img presenta l'attributo \textit{alt} che descrive in maniera sintetica ciò che l'immagine ritrae o quello che rappresenta. \\ 
@@ -22,6 +23,9 @@ Non è stato inserito l'attributo summary perchè obsoleto in HTML5.
 \subsection{Facilitazione alla navigazione}
 Al fine di migliorare l'esperienza d'uso degli utenti sono state inserite le seguenti facilitazioni:
 \begin{itemize}
+	\item \textbf{Tabindex}: Per ogni pagina sono stati ridefiniti i tabindex. Ad ogni pressione
+	del tasto tab il focus si sposta sul link direttamente successivo per agevolare la
+	navigazione, specialmente nella navbar;
 	\item \textbf{Link per spostarsi al contenuto}: prima della barra di navigazione è stato inserito un link nascosto per saltarla, permettendo agli utenti che utilizzano uno screen reader di passare direttamente al contenuto;
 	\item \textbf{Link per tornare all'inizio del contenuto}: nelle pagine dove il contenuto visualizzato risulta essere troppo lungo è stato predisposto un link che permette di ritornare all'inizio del contenuto stesso. Il link viene rappresentato con una freccia rivolta verso l'alto attraverso l'utilizzo di CSS.
 \end{itemize}
